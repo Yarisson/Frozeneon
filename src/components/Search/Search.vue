@@ -21,7 +21,7 @@
       <ais-configure :hits-per-page.camel="10">
           <ais-hits v-if="searchQuery !== ''" :class-names="{'ais-Hits': 'search__hits', 'ais-Hits-list': 'search__hits-list'}" :transform-items="transformItems">
         <template v-slot="{ items}">
-          <article @click="openModal(index, $event)" data-toggle="modal" data-target="#exampleModal" class="search__item" v-for="(item, index) in items" :key="item.objectID">
+          <article @click="openModal(index)" data-toggle="modal" data-target="#exampleModal" class="search__item" v-for="(item, index) in items" :key="item.objectID">
             <div class="search__item-row"><span class="search__item-description">Номер пакета - </span> <span class="search__item-text">{{ index + 1 }}</span></div>
             <div class="search__item-row"><span class="search__item-description">Название пакета</span> <span class="search__item-text">{{ item.name }}</span></div>
             <div class="search__item-row search__item-row--vertical"><span class="search__item-description search__item-description--vertical">Описание пакета</span> <span class="search__item-text">{{ item.description }}</span></div>
@@ -93,15 +93,11 @@ export default {
           name: item.name.toUpperCase(),
         }));
       },
-      openModal(it, one) {
-        console.log(one);
-        console.log(it);
+      openModal(it) {
         this.currentIndex = it;
         this.modalInfo = true;
       },
       refineSearch(refine, value) {
-        console.log(this.searchQuery);
-        
         this.searchQuery = value;
         refine(value);
       },
