@@ -1,0 +1,14 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    padding: 0;
+    background: rgb(171,168,212);
+    background: radial-gradient(circle, rgba(171,168,212,1) 0%, rgba(148,0,222,1) 50% , rgba(171,168,212,1) 100%);
+
+    @media (min-width: 768px) {
+        padding: 40px;
+    }
+}

@@ -1,0 +1,39 @@
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #c0c5e2;
+
+    @media (min-width: 768px) {
+        padding: 30px;
+    }
+
+    &__text {
+        margin: 20px auto;
+        border-radius: 45px;
+        width: 180px;
+
+        @media (min-width: 768px) {
+            width: 200px;
+        }
+    }
+
+    &__link {
+        background-color: rgba($color: #c0c5e2, $alpha: 0.7);
+        transition: background 0.5s, color 0.5s;
+    }
+
+    &__img {
+        width: 140px;
+        border-radius: 30px;
+        margin: auto;
+        border: 3px solid #a5a7b3;
+
+        @media (min-width: 768px) {
+            width: 200px;
+        }
+    }
+}
